@@ -9,6 +9,7 @@ Supports MacOS only.
 
 Open the terminal and enter the following command: 
 ```crontab -e```
+
 Enter the following line of code into the crontab: 
 ```*/15 * * * * osascript -e 'display notification "Sit up straight"' > /dev/null```
 
