@@ -13,20 +13,20 @@ Open the terminal and enter the following command:
 Enter the following line of code into the crontab: 
 ```*/15 * * * * osascript -e 'display notification "Sit up straight"' > /dev/null```
 
-Save the crontab and you're done! 
+Save the file and you're done! 
 
 ### Customization
 If you want to change the frequency, change the 15 to the number of minutes between notifications. 
 Recommended to use intervals of 10, 12, 15, 20, or 30 minutes.
-Hasn't been tested with non-factors of 60; may skip notifications if you use different intervals. 
+For reminders using finer resolution (i.e. seconds), using launchd is recommended. 
 
 ### What if my computer is asleep?
-Don't worry; you won't get notifications if your computer is asleep because the crontab won't run. 
+Don't worry; you won't get notifications if your computer is asleep because cron jobs won't run. 
 
 ### How it works:
-The crontab can schedule tasks and uses the following format:
+Cron is a task scheduler that uses the following format:
 
 MINUTE, HOUR, DAY OF MONTH, MONTH, DAY OF WEEK
 
-A * means it doesn't matter.
+A * means it doesn't matter, i.e. all days are acceptable 
 The */15 indicates a step size of 15, so the program will run every 15 minutes.
